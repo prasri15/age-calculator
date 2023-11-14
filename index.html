@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div class="second-div">
+            <h1 style="text-transform: capitalize;">Enter Date Of Birth</h1>
+            <input type="date" data="YYYY-MM-DD" onchange="changeDateFormat(event);" id="dob-selector" name="dob" class="input-dob">
+            <h6 class="alert-message">Opps. Future dates not allowed.</h6>
+            <div class="button-wrapper">
+                <button onclick="calculateAge()" class="button">Calculate age</button>
+            </div>
+            <div class="age-wrapper">
+                <div class="box" id="year-box">
+                    <h2 id="calculated-year" class="calculated-date"></h2>
+                    <h6 class="calculated-date-label">Years</h6>
+                </div>
+                <div class="box" id="month-box">
+                    <h2 id="calculated-month" class="calculated-date"></h2>
+                    <h6 class="calculated-date-label">Months</h6>
+                </div>
+                <div class="box" id="day-box">
+                    <h2 id="calculated-day" class="calculated-date"></h2>
+                    <h6 class="calculated-date-label">Days</h6>
+                </div>
+            </div>
+            <div class="button-wrapper clear-button-wrapper">
+                <button onclick="clearData(true)" class="button">Clear</button>
+            </div>
+        </div>
+        <div class="loader-wrapper">
+            <div class="loader">
+            </div>
+            Calculating the age ..
+        </div>
+        
+
+    </div>
+
+</body>
+
+</html>
